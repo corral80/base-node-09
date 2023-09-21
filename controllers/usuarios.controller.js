@@ -89,7 +89,7 @@ const usuariosDelete = async (req = request, res = response) =>{
     //Eliminado de la BD Mongo
     //const usuario = await Usuario.findByIdAndDelete(id)
 
-    const usuario = await Usuario.findByIdAndUpdate(id, {estado:false})
+    const usuario = await Usuario.findByIdAndUpdate(id, {estado:false}, {new:true})
 
     res.json(usuario)
 }
